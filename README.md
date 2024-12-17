@@ -1,4 +1,4 @@
-# Music Vibrationc | Udacity Fyyur
+# Music Vibrationc | Udacity Project
 
 ## Introduction
 
@@ -158,18 +158,18 @@ flask db upgrade
 
 python manage.py db init
 ```
-## Development Setup
+## Setup on Your Machine
 
-Download the project starter code locally
+### 1. Download the project starter code locally
 ```
 git clone https://github.com/rawdaymohamed/music-vibration.git
 cd music-vibration
 ```
 Copy `.env.example` and rename the new file to `.env`:
 
-Add your Postgresql database URL to the .env file
+Add your Postgresql database URL (*explained above*) to the .env file
 
-### Initialize and activate a virtualenv using:
+### 2. Initialize and activate a virtualenv using:
 
 ```
 python -m virtualenv venv
@@ -180,15 +180,15 @@ Note - In Windows, the env does not have a bin directory. Therefore, you'd use t
 ```
 source venv/Scripts/activate
 ```
-### Install the dependencies: Backend
+### 3. Install the dependencies: Backend
 ```
 pip install -r requirements.txt
 ```
-### Install the dependencies: Frontend
+### 4. Install the dependencies: Frontend
 ```
 npm install
 ```    
-## Run the development server:
+## 5. Run the development server:
 
 ```
 export FLASK_APP=myapp

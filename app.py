@@ -78,8 +78,13 @@ class Show(db.Model):
         return f'<Show {self.artist_id}{self.venue_id}>'
 
 
+# migrate = Migrate(app, db)
+# db.create_all()
 migrate = Migrate(app, db)
-db.create_all()
+
+# Ensure db.create_all() runs within the application context
+with app.app_context():
+    db.create_all()
 #----------------------------------------------------------------------------#
 # Filters.
 #----------------------------------------------------------------------------#
@@ -138,20 +143,20 @@ def search_venues():
         "count": 1,
         "data": [{
             "id": 2,
-            "name": "The Dueling Pianos Bar",
+            "name": "The Pianos",
             "num_upcoming_shows": 0,
         }]
     }
     search_term = request.form['search_term']
-    all_data = Artist.query.filter(
-        Artist.name.ilike(f"%{search_term}%")).all()
+    all_data = Venue.query.filter(
+        Venue.name.ilike(f"%{search_term}%")).all()
     data = []
-    for artist in all_data:
-        num_upcoming_shows = len(Show.query.filter(Show.artist_id == artist.id).filter(
+    for venue in all_data:
+        num_upcoming_shows = len(Show.query.filter(Show.artist_id == venue.id).filter(
             Show.start_time > datetime.now()).all())
         obj = {
-                "id": artist.id,
-                "name": artist.name,
+                "id": venue.id,
+                "name": venue.name,
                 "num_upcoming_shows": num_upcoming_shows
             }
         data.append(obj)

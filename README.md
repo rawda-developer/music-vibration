@@ -66,7 +66,7 @@ Controllers are also located in `app.py`.
 The web frontend is located in `templates/`, which builds static assets deployed to the web server at `static/`.
 Web forms for creating data are located in `forms.py`
 
-##  Setting up PostgreSQL
+##  Prerequisite - Setting up PostgreSQL
 
 In order to run this project successfully, you will need to install and configure postgresql
 

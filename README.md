@@ -4,7 +4,7 @@
 
 Music Vibration is a musical venue and artist booking site that facilitates the discovery and bookings of shows between local performing artists and venues. This site lets you list new artists and venues, discover them, and list shows with artists as a venue owner.
 
-*This project is originally called Fyyur from Udacity's Advanced Web Development Nanodegree*
+*This project is originally called **Fyyur** from Udacity's Advanced Web Development Nanodegree*
 
 ![plot](/project-img/music-vibration-home-1.png)
 ![plot](/project-img/music-vibration-venue-1.png)
